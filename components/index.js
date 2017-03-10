@@ -8,6 +8,7 @@ import Select from './select'
 import Collapse from './collapse'
 import Tooltip from './tooltip'
 import Popover from './popover'
+import Popconfirm from './popconfirm'
 
 import VTransition from './transition'
 
@@ -32,6 +33,7 @@ const components = {
   Panel: Collapse.Panel,
   Tooltip,
   Popover,
+  Popconfirm,
   VTransition
 }
 

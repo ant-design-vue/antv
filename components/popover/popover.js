@@ -17,13 +17,17 @@ export default {
   },
 
   components: {
+    /**
+     * 定义函数化组件用于插入到popperVM
+     * 实际浮层显示的内容
+     */
     VTooltipContent: {
       functional: true,
 
       render(h, context) {
         const data = context.data
         return (
-          <div class={ [`${data.prefixCls}-inner`] }>
+          <div class="ant-popover-inner">
             <div>
               <div class="ant-popover-title">{ data.title || data.$slots.title}</div>
               <div class="ant-popover-inner-content">{ data.content || data.$slots.content}</div>

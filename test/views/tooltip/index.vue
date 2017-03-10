@@ -9,6 +9,13 @@
     <br>
     <br>
     <div>
+      <v-tooltip :title="text" trigger="focus">
+        <v-input></v-input>
+      </v-tooltip>
+    </div>
+    <br>
+    <br>
+    <div>
       <div style="margin-left: 60px">
         <v-tooltip placement="topLeft" :title="text" @onVisibleChange="onVisibleChange">
           <a href="#">TL</a>

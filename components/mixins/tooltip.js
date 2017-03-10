@@ -2,6 +2,9 @@ import Vue from 'vue'
 
 import Popper from './popper'
 
+/**
+ * 统一处理浮层提示功能
+ */
 export default {
   mixins: [Popper],
 
@@ -34,21 +37,20 @@ export default {
   beforeCreate() {
     this.popperVM = new Vue({
       data: { vnode: '' },
-      render(h) {
+      render() {
         return this.vnode
       }
     }).$mount()
   },
 
-  render(h) {
+  render() {
     this.popperVM.vnode = (
       <v-transition type="zoom-big-fast">
         <div class={ this.popperCls }
              ref="popper"
              v-show={ this.visible }>
           <div class={ [`${this.prefixCls}-content`] }>
-            <v-tooltip-content { ...this }>
-            </v-tooltip-content>
+            <v-tooltip-content { ...this }></v-tooltip-content>
           </div>
         </div>
       </v-transition>)
@@ -63,9 +65,28 @@ export default {
 
       if (this.trigger === 'click') {
         this.reference.addEventListener('click', this.toggle)
+        document.addEventListener('click', this.clickDocument)
       } else if (this.trigger === 'focus') {
-        this.reference.addEventListener('focus', this.showPopper)
-        this.reference.addEventListener('blur', this.closePopper)
+        // 元素中包含input／textarea优先使用focus和blur事件，其他使用mouse事件
+        if (this.reference.nodeName === 'INPUT' ||
+          this.reference.nodeName === 'TEXTAREA') {
+          this.reference.addEventListener('focus', this.showPopper)
+          this.reference.addEventListener('blur', this.closePopper)
+        } else if (this.reference.children.length > 0) {
+          Array.from(this.reference.children).some((node) => {
+            if (node.nodeName === 'INPUT' || node.nodeName === 'TEXTAREA') {
+              node.addEventListener('focus', this.showPopper)
+              node.addEventListener('blur', this.closePopper)
+              return true
+            }
+            return false
+          })
+        } else {
+          this.reference.addEventListener('mousedown', this.showPopper)
+          this.reference.addEventListener('mouseup', this.closePopper)
+          // 处理鼠标一直按下直到移出点击区域时浮层没关闭的情况
+          this.reference.addEventListener('blur', this.closePopper)
+        }
       } else {
         this.reference.addEventListener('mouseenter', this.showPopper)
         this.reference.addEventListener('mouseleave', this.closePopper)
@@ -89,12 +110,17 @@ export default {
     }
   },
 
+  destroyed() {
+    document.removeEventListener('click', this.clickDocument)
+  },
+
   methods: {
     toggle() {
-      this.visible = !this.visible
+      return this.visible ? this.closePopper() : this.showPopper()
     },
 
     showPopper() {
+      if (this.visible) return
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => {
         this.visible = true
@@ -103,11 +129,27 @@ export default {
     },
 
     closePopper() {
+      if (!this.visible) return
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => {
         this.visible = false
         this.$emit('onVisibleChange', this.visible)
       }, this.mouseLeaveDelay)
+    },
+
+    /**
+     * 点击其他空白位置需要关闭浮层
+     * @param e
+     */
+    clickDocument(e) {
+      if (!this.visible ||
+        !this.$el ||
+        !this.reference ||
+        !this.popper ||
+        this.$el.contains(e.target) ||
+        this.reference.contains(e.target) ||
+        this.popper.contains(e.target)) return
+      this.closePopper()
     }
   }
 }

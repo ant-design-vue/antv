@@ -10,6 +10,7 @@ import Input from '../views/input'
 import Select from '../views/select'
 import Collapse from '../views/collapse'
 import Tooltip from '../views/tooltip'
+import Popconfirm from '../views/popconfirm'
 import Popover from '../views/popover'
 import Forms from '../views/forms'
 import General from '../views/forms/general'
@@ -67,6 +68,11 @@ const routes = [
     path: '/popover',
     name: 'popover',
     component: Popover
+  },
+  {
+    path: '/popconfirm',
+    name: 'popconfirm',
+    component: Popconfirm
   },
   {
     path: '/forms',

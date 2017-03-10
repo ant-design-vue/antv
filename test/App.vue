@@ -51,6 +51,11 @@
                 <span to="/popover">Popover 气泡卡片</span>
               </v-menu-item>
             </v-menu-item-group>
+            <v-menu-item-group title="Feedback">
+              <v-menu-item index="popconfirm">
+                <span to="/popconfirm">Popconfirm 气泡确认框</span>
+              </v-menu-item>
+            </v-menu-item-group>
           </v-sub-menu>
         </v-menu>
       </v-col>
