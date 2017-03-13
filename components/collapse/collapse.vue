@@ -34,10 +34,6 @@
       }
     },
     mounted() {
-      this.$children.forEach((node) => {
-        node.store = this.store
-      })
-
       if (this.defaultActiveIndex) {
         this.store.commit('openPanel', { index: this.defaultActiveIndex })
       }

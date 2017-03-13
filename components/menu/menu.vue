@@ -35,7 +35,9 @@
       }
     },
     data() {
-      const store = new Store(this, { uniqueOpened: this.uniqueOpened, router: this.router })
+      const store = new Store(this, {
+        uniqueOpened: this.uniqueOpened, router: this.router, injected: true
+      })
       return {
         store,
         paddingLeft: 24,

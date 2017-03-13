@@ -4,6 +4,7 @@ import Icon from './icon'
 import Menu from './menu'
 import Dropdown from './dropdown'
 import Input from './input'
+import Radio from './radio'
 import Select from './select'
 import Collapse from './collapse'
 import Tooltip from './tooltip'
@@ -26,6 +27,9 @@ const components = {
   ButtonGroup: Button.Group,
   Icon,
   Input,
+  Radio,
+  RadioButton: Radio.RadioButton,
+  RadioGroup: Radio.Group,
   Select,
   Option: Select.Option,
   OptionGroup: Select.OptionGroup,

@@ -36,6 +36,9 @@
               <v-menu-item index="input">
                 <span to="/input">Input 输入框</span>
               </v-menu-item>
+              <v-menu-item index="radio">
+                <span to="/input">Radio 单选框</span>
+              </v-menu-item>
               <v-menu-item index="select">
                 <span to="/select">Select 选择器</span>
               </v-menu-item>
