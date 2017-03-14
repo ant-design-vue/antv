@@ -42,6 +42,9 @@
               <v-menu-item index="checkbox">
                 <span to="/checkbox">Checkbox 多选框</span>
               </v-menu-item>
+              <v-menu-item index="switch">
+                <span to="/switch">Switch 开关</span>
+              </v-menu-item>
               <v-menu-item index="select">
                 <span to="/select">Select 选择器</span>
               </v-menu-item>

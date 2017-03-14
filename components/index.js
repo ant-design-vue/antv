@@ -6,6 +6,7 @@ import Dropdown from './dropdown'
 import Input from './input'
 import Radio from './radio'
 import Checkbox from './checkbox'
+import Switch from './switch'
 import Select from './select'
 import Collapse from './collapse'
 import Tooltip from './tooltip'
@@ -33,6 +34,7 @@ const components = {
   RadioGroup: Radio.Group,
   Checkbox,
   CheckboxGroup: Checkbox.Group,
+  Switch,
   Select,
   Option: Select.Option,
   OptionGroup: Select.OptionGroup,

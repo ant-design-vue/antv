@@ -9,6 +9,7 @@ import Dropdown from '../views/dropdown'
 import Input from '../views/input'
 import Radion from '../views/radio'
 import Checkbox from '../views/checkbox'
+import Switch from '../views/switch'
 import Select from '../views/select'
 import Collapse from '../views/collapse'
 import Tooltip from '../views/tooltip'
@@ -60,6 +61,11 @@ const routes = [
     path: '/checkbox',
     name: 'checkbox',
     component: Checkbox
+  },
+  {
+    path: '/switch',
+    name: 'switch',
+    component: Switch
   },
   {
     path: '/select',
