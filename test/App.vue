@@ -5,7 +5,7 @@
         <v-menu
             :router="true"
             mode="inline"
-            style="width: 240px;">
+            style="width: 150px;">
           <v-menu-item index="welcome">
             <span to="/welcome">Bee UI</span>
           </v-menu-item>
@@ -37,7 +37,10 @@
                 <span to="/input">Input 输入框</span>
               </v-menu-item>
               <v-menu-item index="radio">
-                <span to="/input">Radio 单选框</span>
+                <span to="/radio">Radio 单选框</span>
+              </v-menu-item>
+              <v-menu-item index="checkbox">
+                <span to="/checkbox">Checkbox 多选框</span>
               </v-menu-item>
               <v-menu-item index="select">
                 <span to="/select">Select 选择器</span>

@@ -163,7 +163,7 @@
           this.resizeTextarea()
         })
         this.$emit('input', val)
-        this.$emit('change', val)
+        this.$emit('onChange', val)
       }
     },
     mounted() {

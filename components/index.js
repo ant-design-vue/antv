@@ -5,6 +5,7 @@ import Menu from './menu'
 import Dropdown from './dropdown'
 import Input from './input'
 import Radio from './radio'
+import Checkbox from './checkbox'
 import Select from './select'
 import Collapse from './collapse'
 import Tooltip from './tooltip'
@@ -30,6 +31,8 @@ const components = {
   Radio,
   RadioButton: Radio.RadioButton,
   RadioGroup: Radio.Group,
+  Checkbox,
+  CheckboxGroup: Checkbox.Group,
   Select,
   Option: Select.Option,
   OptionGroup: Select.OptionGroup,

@@ -131,7 +131,7 @@
     watch: {
       currentValue(val) {
         this.$emit('input', val)
-        this.$emit('change', val)
+        this.$emit('onChange', val)
       },
       searchKey() {
         this.compositionstart = false

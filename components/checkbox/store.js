@@ -5,7 +5,7 @@ class Store extends BaseStore {
     super(component, initialState)
 
     this.state = {
-      value: null,
+      value: [],
       disabled: false
     }
 
