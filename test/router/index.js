@@ -7,6 +7,7 @@ import Button from '../views/button'
 import Menu from '../views/menu'
 import Dropdown from '../views/dropdown'
 import Input from '../views/input'
+import InputNumber from '../views/input-number'
 import Radion from '../views/radio'
 import Checkbox from '../views/checkbox'
 import Switch from '../views/switch'
@@ -51,6 +52,11 @@ const routes = [
     path: '/input',
     name: 'input',
     component: Input
+  },
+  {
+    path: '/input-number',
+    name: 'input-number',
+    component: InputNumber
   },
   {
     path: '/radio',

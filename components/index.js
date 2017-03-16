@@ -4,6 +4,7 @@ import Icon from './icon'
 import Menu from './menu'
 import Dropdown from './dropdown'
 import Input from './input'
+import InputNumber from './input-number'
 import Radio from './radio'
 import Checkbox from './checkbox'
 import Switch from './switch'
@@ -29,6 +30,7 @@ const components = {
   ButtonGroup: Button.Group,
   Icon,
   Input,
+  InputNumber,
   Radio,
   RadioButton: Radio.RadioButton,
   RadioGroup: Radio.Group,
