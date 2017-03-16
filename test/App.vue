@@ -64,6 +64,9 @@
               </v-menu-item>
             </v-menu-item-group>
             <v-menu-item-group title="Feedback">
+              <v-menu-item index="alert">
+                <span to="/alert">Alert 警告提示</span>
+              </v-menu-item>
               <v-menu-item index="popconfirm">
                 <span to="/popconfirm">Popconfirm 气泡确认框</span>
               </v-menu-item>

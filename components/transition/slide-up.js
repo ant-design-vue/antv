@@ -1,8 +1,9 @@
 class Transition {
-  constructor() {
+  constructor({ prefixCls }) {
+    const cls = `${prefixCls}-`
     this.props = {
       'enter-active-class': 'slide-up-enter slide-up-enter-active',
-      'leave-active-class': 'slide-up-leave slide-up-leave-active'
+      'leave-active-class': `${cls}slide-up-leave ${cls}slide-up-leave-active`
     }
   }
 }

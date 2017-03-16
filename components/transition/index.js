@@ -6,17 +6,18 @@ export default {
   name: 'VTransition',
   functional: true,
   render(createElement, context) {
-    const type = context.data.attrs.type
+    const attrs = context.data.attrs
+    const type = attrs.type
     let data
     switch (type) {
       case 'collapse':
-        data = new Collapse()
+        data = new Collapse(attrs)
         break
       case 'slide-up':
-        data = new SideUp()
+        data = new SideUp(attrs)
         break
       case 'zoom-big-fast':
-        data = new ZoomBigFast()
+        data = new ZoomBigFast(attrs)
         break
       default:
     }

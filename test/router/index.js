@@ -14,6 +14,7 @@ import Switch from '../views/switch'
 import Select from '../views/select'
 import Collapse from '../views/collapse'
 import Tooltip from '../views/tooltip'
+import Alert from '../views/alert'
 import Popconfirm from '../views/popconfirm'
 import Popover from '../views/popover'
 import Forms from '../views/forms'
@@ -92,6 +93,11 @@ const routes = [
     path: '/popover',
     name: 'popover',
     component: Popover
+  },
+  {
+    path: '/alert',
+    name: 'alert',
+    component: Alert
   },
   {
     path: '/popconfirm',
