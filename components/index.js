@@ -13,6 +13,7 @@ import Collapse from './collapse'
 import Tooltip from './tooltip'
 import Popover from './popover'
 import Alert from './alert'
+import Message from './message'
 import Popconfirm from './popconfirm'
 
 import VTransition from './transition'
@@ -66,6 +67,8 @@ const install = (Vue) => {
       Vue.use(components[key])
     }
   })
+
+  Vue.prototype.$message = Message
 }
 
 export default {

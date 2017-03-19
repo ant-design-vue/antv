@@ -3,7 +3,9 @@
     <div class="ant-alert"
          :class="classes"
          v-if="visible">
-      <i class="anticon anticon-check-circle-o ant-alert-icon" v-if="currentShowIcon"></i>
+      <i class="anticon ant-alert-icon"
+         v-if="currentShowIcon"
+         :class="iconCls"></i>
       <span class="ant-alert-message">{{message}}</span><span class="ant-alert-description">{{description}}</span>
       <a class="ant-alert-close-icon"
          v-if="currentClosable"
@@ -66,7 +68,7 @@
           error: 'cross'
         }[this.type]
         return {
-          [`antion-${icon}-circle${this.description ? '-o' : ''}`]: !!icon
+          [`anticon-${icon}-circle${this.description ? '-o' : ''}`]: !!icon
         }
       }
     },

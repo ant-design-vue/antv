@@ -15,6 +15,7 @@ import Select from '../views/select'
 import Collapse from '../views/collapse'
 import Tooltip from '../views/tooltip'
 import Alert from '../views/alert'
+import Message from '../views/message'
 import Popconfirm from '../views/popconfirm'
 import Popover from '../views/popover'
 import Forms from '../views/forms'
@@ -98,6 +99,11 @@ const routes = [
     path: '/alert',
     name: 'alert',
     component: Alert
+  },
+  {
+    path: '/message',
+    name: 'message',
+    component: Message
   },
   {
     path: '/popconfirm',

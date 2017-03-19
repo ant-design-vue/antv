@@ -34,8 +34,8 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     // 结尾禁用分号
     'semi': ['error', 'never'],
-    // 允许在 for 循环的最后一个表达式中使用 ++ 和 --
-    'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
+    // 允许使用一元操作符 ++ 和 --
+    'no-plusplus': 'off',
     // 可以对函数参数再赋值
     'no-param-reassign': 0,
     // allow debugger during development
