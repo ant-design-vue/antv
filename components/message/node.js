@@ -2,8 +2,8 @@ export default {
   name: 'VNode',
 
   props: {
-    index: '',
-    content: '',
+    index: String,
+    content: String,
     duration: Number,
     type: {
       type: String,
@@ -27,15 +27,14 @@ export default {
 
   mounted() {
     if (this.duration) {
-      // 因为vue缓存组件，删除函数使用闭包，避免引用错误
-      setTimeout((({ index, onClose }) => (() => {
-        this.$parent.remove(index)
-        if (onClose) {
+      setTimeout(() => {
+        this.$parent.remove(this.index)
+        if (this.onClose) {
           this.$nextTick(() => {
-            onClose.call(this.$parent, index)
+            this.onClose.call(this, this.index)
           })
         }
-      }))(this), this.duration)
+      }, this.duration)
     }
   },
 

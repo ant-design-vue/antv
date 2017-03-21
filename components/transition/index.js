@@ -2,6 +2,7 @@ import Collapse from './collapse'
 import SideUp from './slide-up'
 import ZoomBigFast from './zoom-big-fast'
 import MoveUp from './move-up'
+import Fade from './fade'
 
 export default {
   name: 'VTransition',
@@ -22,6 +23,9 @@ export default {
         break
       case 'move-up':
         data = new MoveUp(attrs)
+        break
+      case 'fade':
+        data = new Fade(attrs)
         break
       default:
     }

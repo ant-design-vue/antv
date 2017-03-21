@@ -70,6 +70,9 @@
               <v-menu-item index="message">
                 <span to="/message">Message 全局提示</span>
               </v-menu-item>
+              <v-menu-item index="notification">
+                <span to="/notification">Notification 通知提醒框</span>
+              </v-menu-item>
               <v-menu-item index="popconfirm">
                 <span to="/popconfirm">Popconfirm 气泡确认框</span>
               </v-menu-item>

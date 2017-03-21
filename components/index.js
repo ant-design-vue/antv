@@ -14,6 +14,7 @@ import Tooltip from './tooltip'
 import Popover from './popover'
 import Alert from './alert'
 import Message from './message'
+import Notification from './notification'
 import Popconfirm from './popconfirm'
 
 import VTransition from './transition'
@@ -69,6 +70,7 @@ const install = (Vue) => {
   })
 
   Vue.prototype.$message = Message
+  Vue.prototype.$notification = Notification
 }
 
 export default {
