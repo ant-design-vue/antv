@@ -84,6 +84,7 @@ module.exports = {
     formatter: require('eslint-friendly-formatter')
   },
   vue: {
+    preserveWhitespace: false,
     loaders: utils.cssLoaders({ sourceMap: useCssSourceMap }),
     postcss: [
       require('autoprefixer')({
