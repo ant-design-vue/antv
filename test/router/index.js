@@ -12,9 +12,11 @@ import Radion from '../views/radio'
 import Checkbox from '../views/checkbox'
 import Switch from '../views/switch'
 import Select from '../views/select'
+import Badge from '../views/badge'
 import Collapse from '../views/collapse'
 import Tooltip from '../views/tooltip'
 import Alert from '../views/alert'
+import Modal from '../views/modal'
 import Message from '../views/message'
 import Notification from '../views/notification'
 import Popconfirm from '../views/popconfirm'
@@ -82,6 +84,11 @@ const routes = [
     component: Select
   },
   {
+    path: '/badge',
+    name: 'badge',
+    component: Badge
+  },
+  {
     path: '/collapse',
     name: 'collapse',
     component: Collapse
@@ -100,6 +107,11 @@ const routes = [
     path: '/alert',
     name: 'alert',
     component: Alert
+  },
+  {
+    path: '/modal',
+    name: 'modal',
+    component: Modal
   },
   {
     path: '/message',

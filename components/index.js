@@ -9,10 +9,12 @@ import Radio from './radio'
 import Checkbox from './checkbox'
 import Switch from './switch'
 import Select from './select'
+import Badge from './badge'
 import Collapse from './collapse'
 import Tooltip from './tooltip'
 import Popover from './popover'
 import Alert from './alert'
+import Modal from './modal'
 import Message from './message'
 import Notification from './notification'
 import Popconfirm from './popconfirm'
@@ -43,11 +45,13 @@ const components = {
   Select,
   Option: Select.Option,
   OptionGroup: Select.OptionGroup,
+  Badge,
   Collapse,
   Panel: Collapse.Panel,
   Tooltip,
   Popover,
   Alert,
+  Modal,
   Popconfirm,
   VTransition
 }

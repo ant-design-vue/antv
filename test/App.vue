@@ -53,6 +53,9 @@
               </v-menu-item>
             </v-menu-item-group>
             <v-menu-item-group title="Data Display">
+              <v-menu-item index="badge">
+                <span to="/badge">Badge 徽标数</span>
+              </v-menu-item>
               <v-menu-item index="collapse">
                 <span to="/collapse">Collapse 折叠面板</span>
               </v-menu-item>
@@ -66,6 +69,9 @@
             <v-menu-item-group title="Feedback">
               <v-menu-item index="alert">
                 <span to="/alert">Alert 警告提示</span>
+              </v-menu-item>
+              <v-menu-item index="modal">
+                <span to="/modal">Modal 对话框</span>
               </v-menu-item>
               <v-menu-item index="message">
                 <span to="/message">Message 全局提示</span>

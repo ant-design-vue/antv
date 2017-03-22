@@ -8,7 +8,7 @@ let instance
 let instancePool = [] // 保持生成的实例用于destroy
 let defaultDuration = 1500 // 自动关闭延时
 let defaultTop = 16 // 消息距离顶部的位置
-const emptyFunction = () => {
+const noop = () => {
 }
 
 function getInstance() {
@@ -47,7 +47,7 @@ class Message {
 }
 
 ['info', 'success', 'error', 'warning', 'loading'].forEach((type) => {
-  Message[type] = (content, duration = defaultDuration, onClose = emptyFunction) => {
+  Message[type] = (content, duration = defaultDuration, onClose = noop) => {
     getInstance().add({ type, content, duration, onClose })
   }
 })
