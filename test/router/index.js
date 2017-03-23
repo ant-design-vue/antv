@@ -16,6 +16,7 @@ import Select from '../views/select'
 import Badge from '../views/badge'
 import Collapse from '../views/collapse'
 import Tooltip from '../views/tooltip'
+import Tag from '../views/tag'
 import Alert from '../views/alert'
 import Modal from '../views/modal'
 import Message from '../views/message'
@@ -108,6 +109,11 @@ const routes = [
         path: '/popover',
         name: 'popover',
         component: Popover
+      },
+      {
+        path: '/tag',
+        name: 'tag',
+        component: Tag
       },
       {
         path: '/alert',

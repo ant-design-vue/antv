@@ -68,6 +68,9 @@
               <v-menu-item index="popover">
                 <span to="/popover">Popover 气泡卡片</span>
               </v-menu-item>
+              <v-menu-item index="tag">
+                <span to="/tag">Tag 标签</span>
+              </v-menu-item>
             </v-menu-item-group>
             <v-menu-item-group title="Feedback">
               <v-menu-item index="alert">

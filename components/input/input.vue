@@ -5,6 +5,7 @@
         <slot name="prepend"></slot>
       </span>
       <input
+        ref="input"
         :type="type"
         :class="inputCls"
         :placeholder="placeholder"
@@ -13,6 +14,8 @@
         :readonly="readonly"
         :value="value"
         @input="onInput"
+        @focus="onFocus"
+        @blur="onBlur"
         @keyup.enter="onPressEnter">
       <span class="ant-input-suffix" v-if="icon">
         <i class="anticon" :class="iconCls"
@@ -33,6 +36,8 @@
       :maxlength="maxlength"
       :readonly="readonly"
       v-model="currentValue"
+      @focus="onFocus"
+      @blur="onBlur"
       @keyup.enter="onPressEnter">
     </textarea>
   </div>
@@ -147,14 +152,20 @@
 
         this.textareaStyles = calcTextareaHeight(this.$refs.textarea, minRows, maxRows)
       },
-      onPressEnter(event) {
-        this.$emit('onPressEnter', event)
+      onPressEnter(e) {
+        this.$emit('onPressEnter', e)
       },
-      onInput(event) {
-        this.currentValue = event.target.value
+      onInput(e) {
+        this.currentValue = e.target.value
       },
-      onPressIcon(event) {
-        this.$emit('onPressIcon', event)
+      onPressIcon(e) {
+        this.$emit('onPressIcon', e)
+      },
+      onFocus(e) {
+        this.$emit('onFocus', e)
+      },
+      onBlur(e) {
+        this.$emit('onBlur', e)
       }
     },
     watch: {

@@ -14,6 +14,7 @@ import Badge from './badge'
 import Collapse from './collapse'
 import Tooltip from './tooltip'
 import Popover from './popover'
+import Tag from './tag'
 import Alert from './alert'
 import Modal from './modal'
 import Message from './message'
@@ -53,6 +54,7 @@ const components = {
   Panel: Collapse.Panel,
   Tooltip,
   Popover,
+  Tag,
   Alert,
   Modal,
   Popconfirm,

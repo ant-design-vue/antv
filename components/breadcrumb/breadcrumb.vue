@@ -1,7 +1,7 @@
 <template>
   <div class="ant-breadcrumb">
-    <slot v-if="!autoRoute"></slot>
-    <template v-else>
+    <slot></slot>
+    <template v-if="autoRoute">
       <v-breadcrumb-item v-for="route in routes" :to="route" :key="route.name">
         {{route.name}}
       </v-breadcrumb-item>
