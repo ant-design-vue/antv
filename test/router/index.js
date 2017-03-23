@@ -14,6 +14,7 @@ import Checkbox from '../views/checkbox'
 import Switch from '../views/switch'
 import Select from '../views/select'
 import Badge from '../views/badge'
+import Card from '../views/card'
 import Collapse from '../views/collapse'
 import Tooltip from '../views/tooltip'
 import Tag from '../views/tag'
@@ -94,6 +95,11 @@ const routes = [
         path: '/badge',
         name: 'badge',
         component: Badge
+      },
+      {
+        path: '/card',
+        name: 'card',
+        component: Card
       },
       {
         path: '/collapse',

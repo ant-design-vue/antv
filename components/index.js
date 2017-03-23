@@ -11,6 +11,7 @@ import Checkbox from './checkbox'
 import Switch from './switch'
 import Select from './select'
 import Badge from './badge'
+import Card from './card'
 import Collapse from './collapse'
 import Tooltip from './tooltip'
 import Popover from './popover'
@@ -50,6 +51,7 @@ const components = {
   Option: Select.Option,
   OptionGroup: Select.OptionGroup,
   Badge,
+  Card,
   Collapse,
   Panel: Collapse.Panel,
   Tooltip,

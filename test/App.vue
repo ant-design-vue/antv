@@ -59,6 +59,9 @@
               <v-menu-item index="badge">
                 <span to="/badge">Badge 徽标数</span>
               </v-menu-item>
+              <v-menu-item index="card">
+                <span to="/card">Card 卡片</span>
+              </v-menu-item>
               <v-menu-item index="collapse">
                 <span to="/collapse">Collapse 折叠面板</span>
               </v-menu-item>
