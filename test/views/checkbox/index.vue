@@ -11,7 +11,7 @@
     <br>
     <v-checkbox :indeterminate="indeterminate" v-model="checkAll" @onChange="onCheckAllChange">Check all</v-checkbox>
     <v-checkbox-group v-model="checkedList">
-      <v-checkbox v-for="option in plainOptions" :label="option">{{option}}</v-checkbox>
+      <v-checkbox v-for="option in plainOptions" :label="option" :key="option">{{option}}</v-checkbox>
     </v-checkbox-group>
   </section>
 </template>

@@ -1,6 +1,5 @@
 <template>
-  <div class="ant-checkbox-group"
-       :class="classes">
+  <div class="ant-checkbox-group">
     <slot></slot>
   </div>
 </template>

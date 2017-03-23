@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Welcome from '../views/welcome'
+import Home from '../views/home'
 import Grid from '../views/grid'
 import Button from '../views/button'
 import Menu from '../views/menu'
+import Breadcrumb from '../views/breadcrumb'
 import Dropdown from '../views/dropdown'
 import Input from '../views/input'
 import InputNumber from '../views/input-number'
@@ -29,125 +30,128 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/welcome',
-    name: 'welcome',
-    component: Welcome
-  },
-  {
-    path: '/grid',
-    name: 'grid',
-    component: Grid
-  },
-  {
-    path: '/button',
-    name: 'button',
-    component: Button
-  },
-  {
-    path: '/dropdown',
-    name: 'dropdown',
-    component: Dropdown
-  },
-  {
-    path: '/menu',
-    name: 'menu',
-    component: Menu
-  },
-  {
-    path: '/input',
-    name: 'input',
-    component: Input
-  },
-  {
-    path: '/input-number',
-    name: 'input-number',
-    component: InputNumber
-  },
-  {
-    path: '/radio',
-    name: 'radio',
-    component: Radion
-  },
-  {
-    path: '/checkbox',
-    name: 'checkbox',
-    component: Checkbox
-  },
-  {
-    path: '/switch',
-    name: 'switch',
-    component: Switch
-  },
-  {
-    path: '/select',
-    name: 'select',
-    component: Select
-  },
-  {
-    path: '/badge',
-    name: 'badge',
-    component: Badge
-  },
-  {
-    path: '/collapse',
-    name: 'collapse',
-    component: Collapse
-  },
-  {
-    path: '/tooltip',
-    name: 'tooltip',
-    component: Tooltip
-  },
-  {
-    path: '/popover',
-    name: 'popover',
-    component: Popover
-  },
-  {
-    path: '/alert',
-    name: 'alert',
-    component: Alert
-  },
-  {
-    path: '/modal',
-    name: 'modal',
-    component: Modal
-  },
-  {
-    path: '/message',
-    name: 'message',
-    component: Message
-  },
-  {
-    path: '/notification',
-    name: 'notification',
-    component: Notification
-  },
-  {
-    path: '/popconfirm',
-    name: 'popconfirm',
-    component: Popconfirm
-  },
-  {
-    path: '/forms',
-    name: 'forms',
-    component: Forms,
+    path: '/',
+    name: 'home',
+    component: Home,
     children: [
       {
-        path: '/general',
-        name: 'general',
-        component: General
+        path: '/grid',
+        name: 'grid',
+        component: Grid
       },
       {
-        path: '/special',
-        name: 'special',
-        component: Special
+        path: '/button',
+        name: 'button',
+        component: Button
+      },
+      {
+        path: '/dropdown',
+        name: 'dropdown',
+        component: Dropdown
+      },
+      {
+        path: '/menu',
+        name: 'menu',
+        component: Menu
+      },
+      {
+        path: '/breadcrumb',
+        name: 'breadcrumb',
+        component: Breadcrumb
+      },
+      {
+        path: '/input',
+        name: 'input',
+        component: Input
+      },
+      {
+        path: '/input-number',
+        name: 'input-number',
+        component: InputNumber
+      },
+      {
+        path: '/radio',
+        name: 'radio',
+        component: Radion
+      },
+      {
+        path: '/checkbox',
+        name: 'checkbox',
+        component: Checkbox
+      },
+      {
+        path: '/switch',
+        name: 'switch',
+        component: Switch
+      },
+      {
+        path: '/select',
+        name: 'select',
+        component: Select
+      },
+      {
+        path: '/badge',
+        name: 'badge',
+        component: Badge
+      },
+      {
+        path: '/collapse',
+        name: 'collapse',
+        component: Collapse
+      },
+      {
+        path: '/tooltip',
+        name: 'tooltip',
+        component: Tooltip
+      },
+      {
+        path: '/popover',
+        name: 'popover',
+        component: Popover
+      },
+      {
+        path: '/alert',
+        name: 'alert',
+        component: Alert
+      },
+      {
+        path: '/modal',
+        name: 'modal',
+        component: Modal
+      },
+      {
+        path: '/message',
+        name: 'message',
+        component: Message
+      },
+      {
+        path: '/notification',
+        name: 'notification',
+        component: Notification
+      },
+      {
+        path: '/popconfirm',
+        name: 'popconfirm',
+        component: Popconfirm
+      },
+      {
+        path: '/forms',
+        name: 'forms',
+        component: Forms,
+        children: [
+          {
+            path: 'general',
+            name: 'general',
+            component: General
+          },
+          {
+            path: 'special',
+            name: 'special',
+            component: Special
+          }
+        ]
       }
     ]
-  },
-  {
-    path: '*',
-    redirect: '/welcome'
   }
 ]
 

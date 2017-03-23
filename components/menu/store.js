@@ -51,7 +51,7 @@ class Mutations {
 
     deepNodes(this.component.$children)
     if (item) {
-      if (this.state.router) this.component.$router.push(this.state.selectedIndex)
+      if (this.state.router) this.component.$router.push({ name: this.state.selectedIndex })
       this.component.$emit('onSelect', this.state.selectedIndex, item)
     }
   }

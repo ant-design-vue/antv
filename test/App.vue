@@ -6,8 +6,8 @@
             :router="true"
             mode="inline"
             style="width: 150px;">
-          <v-menu-item index="welcome">
-            <span to="/welcome">Bee UI</span>
+          <v-menu-item index="home">
+            <span to="/">Bee UI</span>
           </v-menu-item>
           <v-sub-menu index="2" :defaultOpened="true">
             <template slot="title">
@@ -26,6 +26,9 @@
             <v-menu-item-group title="Navigation">
               <v-menu-item index="menu">
                 <span to="/menu">Menu 菜单</span>
+              </v-menu-item>
+              <v-menu-item index="breadcrumb">
+                <span to="/breadcrumb">Breadcrumb 面包屑</span>
               </v-menu-item>
               <v-menu-item index="dropdown">
                 <span to="/dropdown">Dropdown 下拉菜单</span>
