@@ -16,13 +16,12 @@
 
     methods: {
       info() {
-        const h = this.$createElement
         this.$notification.info({
-          message: h('p', { style: 'color: red' }, [h('h2', 'Notification Title')]),
+          icon: (<v-icon type="smile-circle" style="color: rgb(16, 142, 233);"></v-icon>),
+          message: (<p style="color: red"><h2>Notification Title</h2></p>),
           description: 'I will never close automatically. I will be close automatically. I will never close automatically.',
           duration: null,
           placement: 'topLeft',
-          icon: h('v-icon'),
           onClose: (index) => {
             console.log(index)
           }
@@ -54,18 +53,6 @@
 
       destroy() {
         this.$notification.destroy()
-      }
-    },
-
-    components: {
-      VIcon: {
-        functional: true,
-
-        render(h) {
-          return (<span class="ant-notification-notice-icon">
-            <i class="anticon anticon-smile-circle" style="color: rgb(16, 142, 233);"></i>
-            </span>)
-        }
       }
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <i :class="classes" :style="styles"></i>
 </template>
-<script type="text/babel">
+<script>
   const iconPrefixCls = 'anticon'
 
   export default {
