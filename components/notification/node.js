@@ -3,8 +3,8 @@ export default {
 
   props: {
     index: String,
-    icon: String,
-    message: String,
+    icon: [String, Object],
+    message: [String, Object],
     description: String,
     duration: Number,
     type: {
@@ -19,7 +19,7 @@ export default {
       <div class="ant-notification-notice ant-notification-notice-closable">
         <div class="ant-notification-notice-content">
           <div class={ { 'ant-notification-notice-with-icon': !!this.icon } }>
-            { this.icon }
+            {this.icon ? <span class="ant-notification-notice-icon">{this.icon}</span> : null}
             <div class="ant-notification-notice-message">{ this.message }</div>
             <div class="ant-notification-notice-description">{ this.description }</div>
           </div>

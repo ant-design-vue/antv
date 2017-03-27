@@ -2,6 +2,7 @@ import { Col, Row } from './grid'
 import Button from './button'
 import Icon from './icon'
 import Menu from './menu'
+import Tabs from './tabs'
 import Breadcrumb from './breadcrumb'
 import Dropdown from './dropdown'
 import Input from './input'
@@ -29,6 +30,8 @@ const components = {
   SubMenu: Menu.SubMenu,
   MenuItemGroup: Menu.ItemGroup,
   MenuItem: Menu.Item,
+  Tabs,
+  TabPane: Tabs.Pane,
   Breadcrumb,
   BreadcrumbItem: Breadcrumb.Item,
   Dropdown,

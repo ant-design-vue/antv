@@ -33,7 +33,9 @@
               <v-menu-item index="dropdown">
                 <span to="/dropdown">Dropdown 下拉菜单</span>
               </v-menu-item>
-
+              <v-menu-item index="tabs">
+                <span to="/tabs">Tabs 标签页</span>
+              </v-menu-item>
             </v-menu-item-group>
             <v-menu-item-group title="Data Entry">
               <v-menu-item index="input">

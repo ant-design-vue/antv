@@ -5,6 +5,7 @@ import Home from '../views/home'
 import Grid from '../views/grid'
 import Button from '../views/button'
 import Menu from '../views/menu'
+import Tabs from '../views/tabs'
 import Breadcrumb from '../views/breadcrumb'
 import Dropdown from '../views/dropdown'
 import Input from '../views/input'
@@ -55,6 +56,11 @@ const routes = [
         path: '/menu',
         name: 'menu',
         component: Menu
+      },
+      {
+        path: '/tabs',
+        name: 'tabs',
+        component: Tabs
       },
       {
         path: '/breadcrumb',

@@ -41,6 +41,8 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // 禁止未使用过的变量,但函数中的参数不检查
-    "no-unused-vars": ["error", { "vars": "all", "args": "none" }]
+    'no-unused-vars': ["error", { "vars": "all", "args": "none" }],
+    // 允许优先级相同的使用不同的操作符
+    'no-mixed-operators': ["error", {"allowSamePrecedence": true}]
   }
 }
