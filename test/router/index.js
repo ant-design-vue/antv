@@ -10,6 +10,7 @@ import Breadcrumb from '../views/breadcrumb'
 import Dropdown from '../views/dropdown'
 import Input from '../views/input'
 import InputNumber from '../views/input-number'
+import Rate from '../views/rate'
 import Radion from '../views/radio'
 import Checkbox from '../views/checkbox'
 import Switch from '../views/switch'
@@ -76,6 +77,11 @@ const routes = [
         path: '/input-number',
         name: 'input-number',
         component: InputNumber
+      },
+      {
+        path: '/rate',
+        name: 'rate',
+        component: Rate
       },
       {
         path: '/radio',

@@ -7,6 +7,7 @@ import Breadcrumb from './breadcrumb'
 import Dropdown from './dropdown'
 import Input from './input'
 import InputNumber from './input-number'
+import Rate from './rate'
 import Radio from './radio'
 import Checkbox from './checkbox'
 import Switch from './switch'
@@ -44,6 +45,7 @@ const components = {
   Icon,
   Input,
   InputNumber,
+  Rate,
   Radio,
   RadioButton: Radio.RadioButton,
   RadioGroup: Radio.Group,
