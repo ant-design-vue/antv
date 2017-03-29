@@ -5,6 +5,7 @@ import Home from '../views/home'
 import Grid from '../views/grid'
 import Button from '../views/button'
 import Menu from '../views/menu'
+import Pagination from '../views/pagination'
 import Tabs from '../views/tabs'
 import Breadcrumb from '../views/breadcrumb'
 import Dropdown from '../views/dropdown'
@@ -57,6 +58,11 @@ const routes = [
         path: '/menu',
         name: 'menu',
         component: Menu
+      },
+      {
+        path: '/pagination',
+        name: 'pagination',
+        component: Pagination
       },
       {
         path: '/tabs',

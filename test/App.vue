@@ -27,6 +27,9 @@
               <v-menu-item index="menu">
                 <span to="/menu">Menu 菜单</span>
               </v-menu-item>
+              <v-menu-item index="pagination">
+                <span to="/pagination">Pagination 分页</span>
+              </v-menu-item>
               <v-menu-item index="breadcrumb">
                 <span to="/breadcrumb">Breadcrumb 面包屑</span>
               </v-menu-item>

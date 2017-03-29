@@ -2,6 +2,7 @@ import { Col, Row } from './grid'
 import Button from './button'
 import Icon from './icon'
 import Menu from './menu'
+import Pagination from './pagination'
 import Tabs from './tabs'
 import Breadcrumb from './breadcrumb'
 import Dropdown from './dropdown'
@@ -31,6 +32,7 @@ const components = {
   SubMenu: Menu.SubMenu,
   MenuItemGroup: Menu.ItemGroup,
   MenuItem: Menu.Item,
+  Pagination,
   Tabs,
   TabPane: Tabs.Pane,
   Breadcrumb,
