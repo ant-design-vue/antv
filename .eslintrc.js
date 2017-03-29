@@ -43,6 +43,8 @@ module.exports = {
     // 禁止未使用过的变量,但函数中的参数不检查
     'no-unused-vars': ["error", { "vars": "all", "args": "none" }],
     // 允许优先级相同的使用不同的操作符
-    'no-mixed-operators': ["error", {"allowSamePrecedence": true}]
+    'no-mixed-operators': ["error", {"allowSamePrecedence": true}],
+    // 允许标识符中有悬空下划线
+    'no-underscore-dangle': 0
   }
 }

@@ -10,20 +10,20 @@
       <div class="ant-select-selection__rendered">
         <template v-if="!showSearch">
           <div class="ant-select-selection-selected-value" style="display: block; opacity: 1;"
-               :title="currentValue || placeholder">
-            {{ currentValue || placeholder }}
+               :title="displayValue || placeholder">
+            {{ displayValue || placeholder }}
           </div>
         </template>
         <template v-else>
           <div unselectable="unselectable" class="ant-select-selection__placeholder"
                style="user-select: none;"
-               v-show="!visible && currentValue === ''">{{ placeholder }}
+               v-show="!visible && displayValue === ''">{{ placeholder }}
           </div>
           <div class="ant-select-selection-selected-value"
                :style="{ opacity : (visible?0.4:1)}"
-               :title="currentValue || placeholder"
+               :title="displayValue || placeholder"
                v-show="composition">
-            {{ currentValue || placeholder }}
+            {{ displayValue || placeholder }}
           </div>
           <div class="ant-select-search ant-select-search--inline" v-show="visible">
             <div class="ant-select-search__field__wrap">
@@ -102,6 +102,7 @@
         prefixCls: 'ant-select-dropdown',
         focused: false,
         currentValue: this.value,
+        displayValue: this.value,
         searchKey: '',
         compositionstart: false,
         activeIndex: -1,
@@ -178,6 +179,7 @@
         this.visible = false
         this.selectedOption = option
         this.currentValue = val
+        this.displayValue = option.$el.innerText
         this.$emit('onSelect', this.currentValue, option)
       },
       onCompositionstart() {

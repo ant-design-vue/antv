@@ -19,10 +19,11 @@ export default {
     }
   },
   render() {
+    const activeIndex = this.store.state.activeIndex
     const data = {
       class: {
-        'ant-tabs-tabpane-active': this.store.state.activeIndex === this.index,
-        'ant-tabs-tabpane-inactive': this.store.state.activeIndex !== this.index
+        'ant-tabs-tabpane-active': activeIndex === this.index,
+        'ant-tabs-tabpane-inactive': activeIndex !== this.index
       }
     }
     return (<div role="tabpanel" aria-hidden="false"

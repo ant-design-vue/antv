@@ -5,11 +5,13 @@ import Home from '../views/home'
 import Grid from '../views/grid'
 import Button from '../views/button'
 import Menu from '../views/menu'
+import Pagination from '../views/pagination'
 import Tabs from '../views/tabs'
 import Breadcrumb from '../views/breadcrumb'
 import Dropdown from '../views/dropdown'
 import Input from '../views/input'
 import InputNumber from '../views/input-number'
+import Rate from '../views/rate'
 import Radion from '../views/radio'
 import Checkbox from '../views/checkbox'
 import Switch from '../views/switch'
@@ -58,6 +60,11 @@ const routes = [
         component: Menu
       },
       {
+        path: '/pagination',
+        name: 'pagination',
+        component: Pagination
+      },
+      {
         path: '/tabs',
         name: 'tabs',
         component: Tabs
@@ -76,6 +83,11 @@ const routes = [
         path: '/input-number',
         name: 'input-number',
         component: InputNumber
+      },
+      {
+        path: '/rate',
+        name: 'rate',
+        component: Rate
       },
       {
         path: '/radio',

@@ -27,6 +27,9 @@
               <v-menu-item index="menu">
                 <span to="/menu">Menu 菜单</span>
               </v-menu-item>
+              <v-menu-item index="pagination">
+                <span to="/pagination">Pagination 分页</span>
+              </v-menu-item>
               <v-menu-item index="breadcrumb">
                 <span to="/breadcrumb">Breadcrumb 面包屑</span>
               </v-menu-item>
@@ -43,6 +46,9 @@
               </v-menu-item>
               <v-menu-item index="input-number">
                 <span to="/input-number">InputNumber数字输入框</span>
+              </v-menu-item>
+              <v-menu-item index="rate">
+                <span to="/rate">Rate 评分</span>
               </v-menu-item>
               <v-menu-item index="radio">
                 <span to="/radio">Radio 单选框</span>

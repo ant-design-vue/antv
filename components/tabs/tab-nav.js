@@ -142,11 +142,11 @@ export default {
     },
 
     onKeyDown(e) {
-      const eventKeyCode = e.keyCode
+      const keyCode = e.keyCode
       e.preventDefault()
-      if (eventKeyCode === KEY_CODE.RIGHT || eventKeyCode === KEY_CODE.DOWN) {
+      if (keyCode === KEY_CODE.RIGHT || keyCode === KEY_CODE.DOWN) {
         this.onTabClick(this.getNextPrevActiveIndex(true))
-      } else if (eventKeyCode === KEY_CODE.LEFT || eventKeyCode === KEY_CODE.UP) {
+      } else if (keyCode === KEY_CODE.LEFT || keyCode === KEY_CODE.UP) {
         this.onTabClick(this.getNextPrevActiveIndex(false))
       }
     },

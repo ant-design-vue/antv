@@ -7,8 +7,8 @@
         v-model="selectValue1"
         placeholder="请选择">
       <v-option-group title="xx">
-        <v-option value="xx11">xx11</v-option>
-        <v-option value="xx12">xx12</v-option>
+        <v-option value="xx11">xx111</v-option>
+        <v-option value="xx12">xx122</v-option>
       </v-option-group>
       <v-option value="xx1">xx1</v-option>
       <v-option value="xx2">xx2</v-option>
@@ -21,8 +21,8 @@
         style="width: 200px;"
         placeholder="请选择"
         v-model="selectValue2">
-      <v-option value="xx1">xx1</v-option>
-      <v-option value="xx2">xx2</v-option>
+      <v-option value="xx1">xx111</v-option>
+      <v-option value="xx2">xx222</v-option>
     </v-select>
     <br>
     <br>
@@ -58,7 +58,7 @@
   export default {
     data() {
       return {
-        selectValue1: 'xx2',
+        selectValue1: 'xx11',
         selectValue2: ''
       }
     },

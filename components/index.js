@@ -2,11 +2,13 @@ import { Col, Row } from './grid'
 import Button from './button'
 import Icon from './icon'
 import Menu from './menu'
+import Pagination from './pagination'
 import Tabs from './tabs'
 import Breadcrumb from './breadcrumb'
 import Dropdown from './dropdown'
 import Input from './input'
 import InputNumber from './input-number'
+import Rate from './rate'
 import Radio from './radio'
 import Checkbox from './checkbox'
 import Switch from './switch'
@@ -30,6 +32,7 @@ const components = {
   SubMenu: Menu.SubMenu,
   MenuItemGroup: Menu.ItemGroup,
   MenuItem: Menu.Item,
+  Pagination,
   Tabs,
   TabPane: Tabs.Pane,
   Breadcrumb,
@@ -44,6 +47,7 @@ const components = {
   Icon,
   Input,
   InputNumber,
+  Rate,
   Radio,
   RadioButton: Radio.RadioButton,
   RadioGroup: Radio.Group,
