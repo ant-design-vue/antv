@@ -8,10 +8,10 @@
     <v-button type="text">Text</v-button>
     <br><br>
     <v-button type="primary" shape="circle" icon="search"></v-button>
-    <v-button type="primary" icon="search"><span>Search</span></v-button>
+    <v-button type="primary" icon="search">Search</v-button>
     <br><br>
     <v-button type="ghost" shape="circle" icon="search"></v-button>
-    <v-button type="ghost" icon="search"><span>Search</span></v-button>
+    <v-button type="ghost" icon="search">Search</v-button>
     <br><br>
     <v-button type="primary" size="large">Large</v-button>
     <v-button type="primary">Default</v-button>
@@ -30,10 +30,10 @@
     <v-button type="dashed" disabled>Dashed(disabled)</v-button>
     <br><br>
     <v-button type="primary" loading>
-      <span>Loading</span>
+      Loading
     </v-button>
     <v-button type="primary" size="small" loading>
-      <span>Loading</span>
+      Loading
     </v-button>
     <br><br>
     <v-button type="primary" :loading="loading" @click.native="toLoading">
@@ -64,10 +64,10 @@
     <h4>With Icon</h4>
     <v-button-group>
       <v-button type="primary">
-        <v-icon type="left" /><span>Go back</span>
+        <v-icon type="left" />Go back
       </v-button>
       <v-button type="primary">
-        <span>Go forward</span><v-icon type="right" />
+        Go forward<v-icon type="right" />
       </v-button>
     </v-button-group>
     <v-button-group>

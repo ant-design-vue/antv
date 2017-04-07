@@ -88,6 +88,7 @@ const install = (Vue) => {
   })
 
   Vue.prototype.$message = Message
+  Vue.prototype.$modal = Modal
   Vue.prototype.$notification = Notification
 }
 

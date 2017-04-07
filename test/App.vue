@@ -1,7 +1,7 @@
 <template>
   <section>
     <v-row>
-      <v-col :span="6">
+      <v-col :span="6 ">
         <v-menu
             :router="true"
             mode="inline"

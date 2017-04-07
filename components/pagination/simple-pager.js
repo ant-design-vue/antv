@@ -11,9 +11,9 @@ export default {
         <input
           type="text"
           domProps-value={this.page}
-          onKeydown={this.handleKeyDown}
-          onKeyup={this.handleKeyUp}
-          onChange={this.handleKeyUp}
+          onKeydown={this.onKeyDown}
+          onKeyup={this.onKeyUp}
+          onChange={this.onKeyUp}
         />
         <span class='ant-pagination-slas'>／</span>
         {this.allPages}
