@@ -1,4 +1,4 @@
-import KEYCODE from './keycode'
+import KEYCODE from '../utils/keycode'
 
 export default {
   props: {
@@ -7,19 +7,19 @@ export default {
   },
 
   methods: {
-    handleKeyDown(e) {
+    onKeyDown(e) {
       const key = e.keyCode
       if (!((!e.shiftKey && (key >= KEYCODE.ZERO &&
         key <= KEYCODE.NINE)) ||
-        key === KEYCODE.ARROW_LEFT ||
-        key === KEYCODE.ARROW_RIGHT ||
+        key === KEYCODE.LEFT ||
+        key === KEYCODE.RIGHT ||
         key === KEYCODE.DELETE ||
         key === KEYCODE.BACKSPACE)) {
         e.preventDefault()
       }
     },
 
-    handleKeyUp(e) {
+    onKeyUp(e) {
       const _val = e.target.value
       let val
 
@@ -33,9 +33,9 @@ export default {
 
       if (e.keyCode === KEYCODE.ENTER) {
         this.handleChange(val)
-      } else if (e.keyCode === KEYCODE.ARROW_UP) {
+      } else if (e.keyCode === KEYCODE.UP) {
         this.handleChange(val - 1)
-      } else if (e.keyCode === KEYCODE.ARROW_DOWN) {
+      } else if (e.keyCode === KEYCODE.DOWN) {
         this.handleChange(val + 1)
       }
     },

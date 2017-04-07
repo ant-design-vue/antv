@@ -1,11 +1,5 @@
 import Dom from '../utils/dom'
-
-const KEY_CODE = {
-  LEFT: 37,
-  UP: 38,
-  RIGHT: 39,
-  DOWN: 40
-}
+import KeyCode from '../utils/keycode'
 
 export default {
   name: 'VTabNav',
@@ -34,7 +28,7 @@ export default {
     const tabsVM = this.getTabsVM()
     const extraVM = this.getExtraVM()
 
-    return (<div role="tablist" class="ant-tabs-bar" tabindex="0" onKeydown={this.onKeyDown}>
+    return (<div role="tablist" class="ant-tabs-bar" tabindex="0" on-keydown={this.onKeyDown}>
       {extraVM}
       <div class="ant-tabs-nav-container"
            {...{ class: { 'ant-tabs-nav-container-scrolling': showNextPrev } }}>
@@ -144,9 +138,9 @@ export default {
     onKeyDown(e) {
       const keyCode = e.keyCode
       e.preventDefault()
-      if (keyCode === KEY_CODE.RIGHT || keyCode === KEY_CODE.DOWN) {
+      if (keyCode === KeyCode.RIGHT || keyCode === KeyCode.DOWN) {
         this.onTabClick(this.getNextPrevActiveIndex(true))
-      } else if (keyCode === KEY_CODE.LEFT || keyCode === KEY_CODE.UP) {
+      } else if (keyCode === KeyCode.LEFT || keyCode === KeyCode.UP) {
         this.onTabClick(this.getNextPrevActiveIndex(false))
       }
     },
