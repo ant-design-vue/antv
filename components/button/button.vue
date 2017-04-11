@@ -1,7 +1,7 @@
 <template>
   <button :type="htmlType" :class="classes">
     <i :class="loadingCls" v-if="loading"></i><i :class="typeCls" v-if="icon && !loading"></i>
-    <span><slot></slot></span>
+    <span v-if="$slots.default"><slot></slot></span>
   </button>
 </template>
 <script type="text/babel">
