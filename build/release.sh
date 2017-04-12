@@ -21,11 +21,11 @@ then
   npm version $VERSION --message "[release] $VERSION"
 
   # publish
-  git push antv master
-  git push antv refs/tags/v$VERSION
+  git push origin master
+  git push origin refs/tags/v$VERSION
   git checkout dev
   git rebase master
-  git push antv dev
+  git push origin dev
 
   npm publish
 fi
