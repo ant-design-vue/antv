@@ -8,6 +8,7 @@ var config = require('../config')
 var ora = require('ora')
 var webpack = require('webpack')
 var webpackConfig = require('./webpack.prod.conf')
+var prodWebpackConfig = require('./webpack.prod.min.conf')
 
 console.log(
   '  Tip:\n' +
@@ -23,7 +24,7 @@ rm('-rf', assetsPath)
 mkdir('-p', assetsPath)
 cp('-R', 'static/*', assetsPath)
 
-webpack(webpackConfig, function (err, stats) {
+webpack([webpackConfig, prodWebpackConfig], function (err, stats) {
   spinner.stop()
   if (err) throw err
   process.stdout.write(stats.toString({
