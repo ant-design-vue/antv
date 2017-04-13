@@ -35,7 +35,7 @@
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint components --ext .js,.vue src",
-    "pub": "npm run lint && sh build/git-release.sh && sh build/release.sh"
+    "pub": "sh build/git-release.sh && sh build/release.sh"
   },
   "dependencies": {
     "popper.js": "^0.6.4",
