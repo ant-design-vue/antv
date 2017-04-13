@@ -4,4 +4,4 @@ dist/
 npm-debug.log
 /.idea
 /node_modules.zip
-build/
+build/release.sh
