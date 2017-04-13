@@ -1,6 +1,6 @@
 {
   "name": "antv",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Ant Design of Vue",
   "author": "FlashHK <flashhk@qq.com>",
   "main": "dist/antv",
