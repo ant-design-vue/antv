@@ -26,14 +26,14 @@
     computed: {
       wrapperCls() {
         return {
-          'ant-radio-button-wrapper-checked': this.label === this.value,
+          'ant-radio-button-wrapper-checked': this.label === this.model,
           'ant-radio-button-wrapper-disabled': this.isDisabled
         }
       },
 
       classes() {
         return {
-          'ant-radio-button-checked': this.label === this.value,
+          'ant-radio-button-checked': this.label === this.model,
           'ant-radio-button-disabled': this.isDisabled
         }
       }

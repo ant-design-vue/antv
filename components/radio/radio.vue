@@ -32,7 +32,7 @@
 
       classes() {
         return {
-          'ant-radio-checked': this.label === this.value,
+          'ant-radio-checked': this.label === this.model,
           'ant-radio-disabled': this.isDisabled
         }
       }
