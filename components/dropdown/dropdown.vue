@@ -1,5 +1,5 @@
 <template>
-  <div v-clickoutside="hide">
+  <span v-clickoutside="hide">
     <slot name="title"></slot>
     <v-transition type="slide-up">
       <div class="ant-dropdown"
@@ -9,7 +9,7 @@
         <slot name="menu"></slot>
       </div>
     </v-transition>
-  </div>
+  </span>
 </template>
 
 <style lang="less">
