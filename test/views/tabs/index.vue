@@ -23,20 +23,13 @@
     <br>
     <v-tabs type="editable-card"
             v-model="activeIndex3"
-            @onTabAdd="onTabAdd"
-            @onTabRemove="onTabRemove">
+            @onEdit="onEdit">
       <v-tab-pane
         v-for="pane in panes"
         :tab="pane.title"
         :key="pane.index"
         :index="pane.index"
-        :closable="pane.closable">
-        {{pane.content}}
-
-
-
-
-      </v-tab-pane>
+        :closable="pane.closable">{{pane.content}}</v-tab-pane>
     </v-tabs>
   </section>
 </template>
@@ -51,20 +44,24 @@
         tab2: (<span><v-icon type="android"/>Tab 2</span>),
         newTabIndex: 0,
         panes: [
-          { title: 'Tab 1', content: 'Content of Tab 1', index: '1' },
+          { title: 'Tab 1', content: 'Content of Tab 1', index: '1', closable: false },
           { title: 'Tab 2', content: 'Content of Tab 2', index: '2' }
         ]
       }
     },
 
     methods: {
-      onTabAdd() {
+      onEdit(targetIndex, action) {
+        this[action](targetIndex)
+      },
+
+      add() {
         const activeIndex = `newTab${this.newTabIndex++}`
         this.panes.push({ title: 'New Tab', content: `Content of ${activeIndex}`, index: activeIndex })
         this.activeIndex3 = activeIndex
       },
 
-      onTabRemove(targetIndex) {
+      remove(targetIndex) {
         let lastIndex
         if (this.activeIndex3 === targetIndex) {
           lastIndex = this.panes.findIndex(pane => (pane.index === targetIndex)) - 1

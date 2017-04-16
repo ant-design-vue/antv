@@ -128,12 +128,12 @@ export default {
 
     createNewTab() {
       this.action = 'add'
-      this.store.component.$emit('onTabAdd')
+      this.store.component.$emit('onEdit', null, this.action)
     },
 
     removeTab(index, e) {
       this.action = 'remove'
-      this.store.component.$emit('onTabRemove', index)
+      this.store.component.$emit('onEdit', index, this.action)
       e.stopPropagation()
     },
 
