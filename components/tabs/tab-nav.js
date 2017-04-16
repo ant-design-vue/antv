@@ -45,22 +45,30 @@ export default {
     </div>)
   },
 
+  mounted() {
+    this.updateTab()
+  },
+
   beforeUpdate() {
-    this.setNextPrev()
-    // 非card类型才有lnkbar
-    if (['card', 'editable-card'].indexOf(this.store.state.key) === -1) {
-      this.setLnkBar()
-    }
-    // 在tab点击，添加／删除tab时才滑动到选中的tab
-    if (['add', 'remove', 'change'].indexOf(this.action) !== -1) {
-      this.$nextTick(() => {
-        this.scrollToActiveTab()
-      })
-    }
-    this.action = ''
+    this.updateTab()
   },
 
   methods: {
+    updateTab() {
+      this.setNextPrev()
+      // 非card类型才有lnkbar
+      if (['card', 'editable-card'].indexOf(this.store.state.key) === -1) {
+        this.setLnkBar()
+      }
+      // 在tab点击，添加／删除tab时才滑动到选中的tab
+      if (['add', 'remove', 'change'].indexOf(this.action) !== -1) {
+        this.$nextTick(() => {
+          this.scrollToActiveTab()
+        })
+      }
+      this.action = ''
+    },
+
     getTabsVM() {
       const { activeIndex, type } = this.store.state
       const tabs = this.panes.map((pane) => {
