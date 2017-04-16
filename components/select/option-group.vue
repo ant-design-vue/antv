@@ -1,5 +1,5 @@
 <template>
-  <v-menu-item-group prefixCls="ant-select-dropdown" :title="title">
+  <v-menu-item-group prefixCls="ant-select-dropdown" :title="label">
     <slot></slot>
   </v-menu-item-group>
 </template>
@@ -9,7 +9,7 @@
   export default {
     name: 'VOptionGroup',
     props: {
-      title: {
+      label: {
         type: String,
         required: true
       }

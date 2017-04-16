@@ -6,7 +6,7 @@
         size="small"
         v-model="selectValue1"
         placeholder="请选择">
-      <v-option-group title="xx">
+      <v-option-group label="xx">
         <v-option value="xx11">xx111</v-option>
         <v-option value="xx12">xx122</v-option>
       </v-option-group>

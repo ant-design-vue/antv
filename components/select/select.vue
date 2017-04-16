@@ -1,12 +1,13 @@
 <template>
   <div class="ant-select ant-select-enabled"
        v-clickoutside="hide"
-       :class="selectCls"
-       @keydown.enter.prevent="selectOption"
-       @keydown.esc.prevent="onPressEsc"
-       @keydown.down.prevent="changeActive('next')"
-       @keydown.up.prevent="changeActive('prev')">
-    <div class="ant-select-selection ant-select-selection--single" tabindex="0">
+       :class="selectCls">
+    <div class="ant-select-selection ant-select-selection--single" tabindex="0"
+         ref="selection"
+         @keydown.enter.prevent="selectOption"
+         @keydown.esc.prevent="onPressEsc"
+         @keydown.down.prevent="changeActive('next')"
+         @keydown.up.prevent="changeActive('prev')">
       <div class="ant-select-selection__rendered">
         <template v-if="!showSearch">
           <div class="ant-select-selection-selected-value" style="display: block; opacity: 1;"
@@ -168,7 +169,7 @@
         this.visible = !this.visible
       },
       onFocus() {
-        this.$el.focus()
+        this.$refs.selection.focus()
         this.focused = true
       },
       onPressEsc() {
