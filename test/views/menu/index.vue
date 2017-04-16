@@ -10,11 +10,7 @@
         <v-icon type="mail"/>
         Option 1
       </v-menu-item>
-      <v-sub-menu index="sub1">
-        <template slot="title">
-          <v-icon type="mail"/>
-          <span>Navigation One</span>
-        </template>
+      <v-sub-menu index="sub1" title="Navigation One">
         <v-menu-item-group title="Item 1">
           <v-menu-item index="1">Option 1</v-menu-item>
           <v-menu-item index="2">Option 2</v-menu-item>

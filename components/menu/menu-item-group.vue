@@ -2,7 +2,10 @@
   <li :class="[`${prefixCls}-menu-item-group`]">
     <div :class="[`${prefixCls}-menu-item-group-title`]"
          :style="styles">
-      {{title}}
+      <slot name="title"></slot>
+      <template v-if="!$slots.title">
+        {{title}}
+      </template>
     </div>
     <ul :class="[`${prefixCls}-menu-item-group-list`]">
       <slot></slot>

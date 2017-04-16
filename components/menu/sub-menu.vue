@@ -4,6 +4,9 @@
     <div class="ant-menu-submenu-title" ref="submenu-title"
          :style="styles">
       <slot name="title"></slot>
+      <template v-if="!$slots.title">
+       {{title}}
+      </template>
     </div>
     <v-transition :type="transitionType">
       <ul class="ant-menu ant-menu-sub"
@@ -30,7 +33,8 @@
       defaultOpened: {
         type: Boolean,
         default: false
-      }
+      },
+      title: String
     },
     data() {
       return {
