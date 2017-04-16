@@ -96,10 +96,10 @@
     },
     mounted() {
       this.$nextTick(() => {
-        if (this.mode === ENUM.MODE.HORIZONTAL) {
+        if (this.mode === ENUM.MODE.HORIZONTAL || this.mode === ENUM.MODE.VERTICAL) {
           this.$el.addEventListener('mouseenter', this.onMouseEnter)
           this.$el.addEventListener('mouseleave', this.onMouseLeave)
-          this.transitionType = 'slide-up'
+          this.transitionType = this.mode === ENUM.MODE.VERTICAL ? 'zoom-big-fast' : 'slide-up'
         } else {
           this.$refs['submenu-title'].addEventListener('click', this.onTitleClick)
           this.transitionType = 'collapse'
