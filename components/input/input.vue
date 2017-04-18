@@ -1,8 +1,8 @@
 <template>
-  <div :class="wrapCls">
+  <span :class="wrapCls">
     <template v-if="type !== 'textarea'">
-      <span :class="addonCls" v-if="$slots.prepend">
-        <slot name="prepend"></slot>
+      <span :class="addonCls" v-if="$slots.addonBefore">
+        <slot name="addonBefore"></slot>
       </span>
       <input
         ref="input"
@@ -18,11 +18,10 @@
         @blur="onBlur"
         @keyup.enter="onPressEnter">
       <span class="ant-input-suffix" v-if="icon">
-        <i class="anticon" :class="iconCls"
-           @click="onPressIcon"></i>
+        <v-icon :type="icon" @click.native="onPressIcon"/>
       </span>
-      <span :class="addonCls" v-if="$slots.append">
-        <slot name="append"></slot>
+      <span :class="addonCls" v-if="$slots.addonAfter">
+        <slot name="addonAfter"></slot>
       </span>
     </template>
     <textarea
@@ -40,7 +39,7 @@
       @blur="onBlur"
       @keyup.enter="onPressEnter">
     </textarea>
-  </div>
+  </span>
 </template>
 
 <style lang="less">
@@ -110,9 +109,8 @@
         return [
           {
             [`${prefixCls}-preSuffix-wrapper`]: !!this.icon,
-            [`${prefixCls}-type`]: this.type,
-            [`${prefixCls}-group`]: this.$slots.prepend || this.$slots.append,
-            [`${prefixCls}-group-${this.sizeCls}`]: (this.$slots.prepend || this.$slots.append) && !!this.sizeCls
+            [`${prefixCls}-group`]: this.$slots.addonBefore || this.$slots.addonAfter,
+            [`${prefixCls}-group-${this.sizeCls}`]: (this.$slots.addonBefore || this.$slots.addonAfter) && !!this.sizeCls
           }
         ]
       },
@@ -159,7 +157,7 @@
         this.currentValue = e.target.value
       },
       onPressIcon(e) {
-        this.$emit('onPressIcon', e)
+        this.$emit('onPressIcon', this.currentValue)
       },
       onFocus(e) {
         this.$emit('onFocus', e)

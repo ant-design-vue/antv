@@ -11,7 +11,7 @@
     <br>
     <br>
     <br>
-    <v-input icon="search" placeholder="请输入..." style="width: 200px"></v-input>
+    <v-input icon="search" placeholder="请输入..." style="width: 200px" @onPressIcon="onPressIcon"></v-input>
     <br>
     <br>
     <br>
@@ -28,8 +28,8 @@
     <br>
     <br>
     <v-input placeholder="请输入内容" style="width: 300px">
-      <template slot="prepend">Http://</template>
-      <template slot="append">.com</template>
+      <template slot="addonBefore">Http://</template>
+      <template slot="addonAfter">.com</template>
     </v-input>
   </section>
 </template>
@@ -43,6 +43,11 @@
     watch: {
       input1() {
         console.log(this.input1)
+      }
+    },
+    methods: {
+      onPressIcon() {
+        console.log(111)
       }
     }
   }

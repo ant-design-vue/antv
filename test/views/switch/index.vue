@@ -8,7 +8,7 @@
      <v-icon slot="checkedChildren" type="check"></v-icon>
      <v-icon slot="unCheckedChildren" type="cross"></v-icon>
    </v-switch>
-   <v-switch disabled=""></v-switch>
+   <v-switch v-model="switch4" disabled></v-switch>
   </section>
 </template>
 <script>
@@ -17,7 +17,8 @@
       return {
         switch1: false,
         switch2: false,
-        switch3: false
+        switch3: false,
+        switch4: false
       }
     },
     methods: {

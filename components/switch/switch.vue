@@ -38,6 +38,7 @@
 
     methods: {
       onClick() {
+        if (this.disabled) return
         const val = !this.value
         this.$emit('input', val)
         this.$emit('onChange', val)
