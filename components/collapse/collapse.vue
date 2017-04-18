@@ -19,23 +19,25 @@
         type: Boolean,
         default: false
       },
-      defaultActiveIndex: [String, Array],
+      value: [String, Array],
       bordered: {
         type: Boolean,
         default: true
       }
     },
     data() {
-      const store = new Store(this, { accordion: this.accordion })
+      const store = new Store(this, { accordion: this.accordion, injected: true })
       return {
         store
       }
     },
-    beforeMount() {
-      let { defaultActiveIndex } = this
-      if (defaultActiveIndex) {
-        defaultActiveIndex = typeof defaultActiveIndex === 'string' ? [defaultActiveIndex] : defaultActiveIndex
-        this.store.commit('openPanel', { indexs: defaultActiveIndex })
+    mounted() {
+      let { value } = this
+      if (value) {
+        value = typeof value === 'string' ? [value] : value
+        this.store.commit('openPanel', { indexs: value })
+      } else if (this.accordion && this.$children.length > 0) {
+        this.store.commit('openPanel', { indexs: [this.$children[0].index] })
       }
     }
   }

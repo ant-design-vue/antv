@@ -32,7 +32,7 @@
     },
     data() {
       return {
-        store: {},
+        store: this.$parent.store,
         active: false
       }
     },

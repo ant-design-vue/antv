@@ -27,6 +27,7 @@ class Mutations {
     this.component.$children.forEach((node) => {
       node.active = this.state.activeIndexs.indexOf(node.index) > -1
     })
+    this.component.$emit('input', this.state.activeIndexs)
     this.component.$emit('onChange', this.state.activeIndexs)
   }
 }
