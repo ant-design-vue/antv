@@ -70,7 +70,8 @@
 
       wrapperCls() {
         return {
-          'ant-badge-status ant-badge-not-a-wrapper': !!this.status
+          'ant-badge-not-a-wrapper': !this.$slots.default || !!this.status,
+          'ant-badge-status': !!this.status
         }
       },
 
