@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2 style="margin-bottom: 100px">Collapse折叠面板</h2>
-    <v-collapse defaultActiveIndex="1">
+    <v-collapse :defaultActiveIndex="['1','2']" @onChange="onChange">
       <v-panel index="1" header="This is panel header 1">
         This is panel header 1
       </v-panel>
@@ -27,7 +27,7 @@
     <br>
     <br>
     <br>
-    <v-collapse bordered>
+    <v-collapse :bordered="false">
       <v-panel index="1" header="This is panel header 1">
         This is panel header 1
       </v-panel>
@@ -38,4 +38,11 @@
   </section>
 </template>
 <script>
+  export default {
+    methods: {
+      onChange(index) {
+        console.log(index)
+      }
+    }
+  }
 </script>

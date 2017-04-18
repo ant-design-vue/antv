@@ -1,6 +1,6 @@
 <template>
   <div class="ant-collapse"
-       :class="{ 'ant-collapse-borderless': bordered}">
+       :class="{ 'ant-collapse-borderless': !bordered}">
     <slot></slot>
   </div>
 </template>
@@ -19,12 +19,10 @@
         type: Boolean,
         default: false
       },
-      defaultActiveIndex: {
-        type: String
-      },
+      defaultActiveIndex: [String, Array],
       bordered: {
         type: Boolean,
-        default: false
+        default: true
       }
     },
     data() {
@@ -33,9 +31,11 @@
         store
       }
     },
-    mounted() {
-      if (this.defaultActiveIndex) {
-        this.store.commit('openPanel', { index: this.defaultActiveIndex })
+    beforeMount() {
+      let { defaultActiveIndex } = this
+      if (defaultActiveIndex) {
+        defaultActiveIndex = typeof defaultActiveIndex === 'string' ? [defaultActiveIndex] : defaultActiveIndex
+        this.store.commit('openPanel', { indexs: defaultActiveIndex })
       }
     }
   }

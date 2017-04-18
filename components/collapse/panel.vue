@@ -38,7 +38,7 @@
     },
     methods: {
       onHeaderClick() {
-        this.store.commit(this.active ? 'closePanel' : 'openPanel', { index: this.index })
+        this.store.commit(this.active ? 'closePanel' : 'openPanel', { indexs: [this.index] })
       }
     }
   }
