@@ -24,7 +24,7 @@ export default {
     },
     mouseLeaveDelay: {
       type: Number,
-      default: 100
+      default: 0.1
     }
   },
 
@@ -67,13 +67,15 @@ export default {
         this.reference.addEventListener('click', this.toggle)
         document.addEventListener('click', this.clickDocument)
       } else if (this.trigger === 'focus') {
+        let flag = false
         // 元素中包含input／textarea优先使用focus和blur事件，其他使用mouse事件
         if (this.reference.nodeName === 'INPUT' ||
           this.reference.nodeName === 'TEXTAREA') {
           this.reference.addEventListener('focus', this.showPopper)
           this.reference.addEventListener('blur', this.closePopper)
+          flag = true
         } else if (this.reference.children.length > 0) {
-          Array.from(this.reference.children).some((node) => {
+          flag = Array.from(this.reference.children).some((node) => {
             if (node.nodeName === 'INPUT' || node.nodeName === 'TEXTAREA') {
               node.addEventListener('focus', this.showPopper)
               node.addEventListener('blur', this.closePopper)
@@ -81,7 +83,8 @@ export default {
             }
             return false
           })
-        } else {
+        }
+        if (!flag) {
           this.reference.addEventListener('mousedown', this.showPopper)
           this.reference.addEventListener('mouseup', this.closePopper)
           // 处理鼠标一直按下直到移出点击区域时浮层没关闭的情况
@@ -107,6 +110,14 @@ export default {
   computed: {
     popperCls() {
       return [this.prefixCls].concat(this.placementCls)
+    },
+
+    currentMouseEnterDelay() {
+      return this.mouseEnterDelay * 1000
+    },
+
+    currentMouseLeaveDelay() {
+      return this.mouseLeaveDelay * 1000
     }
   },
 
@@ -125,7 +136,7 @@ export default {
       this.timeout = setTimeout(() => {
         this.visible = true
         this.$emit('onVisibleChange', this.visible)
-      }, this.mouseEnterDelay)
+      }, this.currentMouseEnterDelay)
     },
 
     closePopper() {
@@ -134,7 +145,7 @@ export default {
       this.timeout = setTimeout(() => {
         this.visible = false
         this.$emit('onVisibleChange', this.visible)
-      }, this.mouseLeaveDelay)
+      }, this.currentMouseLeaveDelay)
     },
 
     /**

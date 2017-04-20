@@ -7,7 +7,7 @@ export default {
   mixins: [TooltipMixin],
 
   props: {
-    content: String
+    content: [String, Object]
   },
 
   data() {

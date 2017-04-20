@@ -2,8 +2,15 @@
   <section class="code-box-demo">
     <h2 style="margin-bottom: 100px">Popover</h2>
     <div>
-      <v-popover title="title" content="content">
+      <v-popover title="title" :content="content">
         <span>Tooltip will show when mouse enter.（简单内容）</span>
+      </v-popover>
+    </div>
+    <br>
+    <br>
+    <div>
+      <v-popover title="title" content="content" trigger="focus">
+        <v-button>Tooltip</v-button>
       </v-popover>
     </div>
     <br>
@@ -97,7 +104,11 @@
   export default {
     data() {
       return {
-        text: 'prompt text'
+        text: 'prompt text',
+        content: (<div>
+          <p>Content</p>
+          <p>Content</p>
+        </div>)
       }
     },
     methods: {
