@@ -37,6 +37,14 @@
     },
     data() {
       return {
+        placementMap: {
+          topCenter: 'top',
+          bottomCenter: 'bottom'
+        },
+        popperMap: {
+          top: 'topCenter',
+          bottom: 'bottomCenter'
+        },
         prefixCls: 'ant-dropdown',
         timeout: null
       }

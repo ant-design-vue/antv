@@ -3,7 +3,7 @@
     <h2 style="margin-bottom: 100px">下拉菜单</h2>
     <v-row>
       <v-col :span="12">
-        <v-dropdown>
+        <v-dropdown placement="topCenter">
           <a className="ant-dropdown-link" href="javascript:;" slot="title">
             Cascading menu
             <v-icon type="down"/>
@@ -17,7 +17,7 @@
       </v-col>
 
       <v-col :span="12">
-        <v-dropdown trigger="click">
+        <v-dropdown trigger="click" placement="bottomCenter">
           <a className="ant-dropdown-link" href="javascript:;" slot="title">
             Cascading menu
             <v-icon type="down"/>

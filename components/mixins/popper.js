@@ -50,13 +50,15 @@ export default {
 
   data() {
     return {
+      placementMap,
+      popperMap,
       popper: null,
       reference: null,
       visible: false,
       offset: 0,
       boundariesPadding: 5,
       visibleArrow: false,
-      currentPalcement: placementMap[this.placement]
+      currentPalcement: ''
     }
   },
 
@@ -72,13 +74,17 @@ export default {
 
   computed: {
     placementCls() {
-      return [`${this.prefixCls}-placement-${popperMap[this.currentPalcement]}`]
+      return [`${this.prefixCls}-placement-${this.popperMap[this.currentPalcement]}`]
     }
+  },
+
+  created() {
+    this.currentPalcement = this.placementMap[this.placement]
   },
 
   methods: {
     createPopper() {
-      if (Object.keys(placementMap).indexOf(this.placement) === -1) return
+      if (Object.keys(this.placementMap).indexOf(this.placement) === -1) return
       this.popper = this.popper || this.$refs.popper
       const options = this.popperOptions
       if (!this.popper || !this.reference) return
