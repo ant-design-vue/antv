@@ -18,7 +18,7 @@ export default {
     },
     width: {
       type: Number,
-      default: 520
+      default: 416
     },
     type: {
       type: String,

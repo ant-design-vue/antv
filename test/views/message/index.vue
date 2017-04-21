@@ -12,18 +12,18 @@
 <script>
   export default {
     created() {
-      this.$message.config({ top: 16, duration: 1500 })
+      this.$message.config({ top: 16, duration: 1.5 })
     },
 
     methods: {
       info() {
-        this.$message.info('This is a message of info', 0, (index) => {
+        this.$message.info('This is a message of info', 10, (index) => {
           console.log(index)
         })
       },
 
       success() {
-        this.$message.success('This is a message of success')
+        this.$message.success('This is a message of success', 2)
       },
 
       error() {

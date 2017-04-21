@@ -6,7 +6,7 @@ const VMessage = Vue.extend(VNodes)
 
 let instance
 let instancePool = [] // 保持生成的实例用于destroy
-let defaultDuration = 1500 // 自动关闭延时
+let defaultDuration = 1.5 // 自动关闭延时
 let defaultTop = 16 // 消息距离顶部的位置
 const noop = () => {
 }

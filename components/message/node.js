@@ -34,7 +34,7 @@ export default {
             this.onClose.call(this, this.index)
           })
         }
-      }, this.duration)
+      }, this.duration * 1000)
     }
   },
 

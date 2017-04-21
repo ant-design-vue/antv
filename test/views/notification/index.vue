@@ -1,6 +1,7 @@
 <template>
   <section>
     <h2>Notification 通知提醒框</h2>
+    <v-button @click.native="open">Open</v-button>
     <v-button @click.native="info">Info</v-button>
     <v-button @click.native="success">Success</v-button>
     <v-button @click.native="error">Error</v-button>
@@ -11,13 +12,25 @@
 <script type="text/babel">
   export default {
     created() {
-      this.$notification.config({ placement: 'bottomLeft', top: 24, bottom: 24, duration: 4500 })
+      this.$notification.config({ placement: 'bottomLeft', top: 24, bottom: 24, duration: 1.5 })
     },
 
     methods: {
+      open() {
+        this.$notification.open({
+          icon: (<v-icon type="smile-circle" style="color: rgb(16, 142, 233);"></v-icon>),
+          message: (<p style="color: red"><h2>Notification Title</h2></p>),
+          description: 'I will never close automatically. I will be close automatically. I will never close automatically.',
+          duration: null,
+          placement: 'topLeft',
+          onClose: (index) => {
+            console.log(index)
+          }
+        })
+      },
+
       info() {
         this.$notification.info({
-          icon: (<v-icon type="smile-circle" style="color: rgb(16, 142, 233);"></v-icon>),
           message: (<p style="color: red"><h2>Notification Title</h2></p>),
           description: 'I will never close automatically. I will be close automatically. I will never close automatically.',
           duration: null,
@@ -32,7 +45,8 @@
         this.$notification.success({
           message: 'Notification Title',
           description: 'I will never close automatically. I will be close automatically. I will never close automatically.',
-          placement: 'bottomRight'
+          placement: 'bottomRight',
+          duration: null
         })
       },
 

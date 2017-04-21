@@ -6,7 +6,7 @@ const VNotification = Vue.extend(VNodes)
 
 let instance
 let instancePool = [] // 保持生成的实例用于destroy
-let defaultDuration = 4500 // 自动关闭延时
+let defaultDuration = 4.5 // 自动关闭延时
 let defaultTop = 24 // 消息距离顶部的位置
 let defaultBottom = 24 // 消息距离底部的位置
 let defaultPlacement = 'topRight' // 弹出位置，可选 topLeft topRight bottomLeft bottomRight
@@ -58,7 +58,7 @@ class Notification {
   }
 }
 
-['info', 'success', 'error', 'warning'].forEach((type) => {
+['open', 'info', 'success', 'error', 'warning'].forEach((type) => {
   Notification[type] = ({
                           icon,
                           message,

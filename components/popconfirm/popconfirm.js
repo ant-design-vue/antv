@@ -30,14 +30,14 @@ export default {
   },
 
   methods: {
-    onConfirm() {
+    onConfirm(e) {
       this.closePopper()
-      this.$emit('onConfirm')
+      this.$emit('onConfirm', e)
     },
 
-    onCancel() {
+    onCancel(e) {
       this.closePopper()
-      this.$emit('onCancel')
+      this.$emit('onCancel', e)
     }
   },
 
