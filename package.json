@@ -40,8 +40,7 @@
   "dependencies": {
     "popper.js": "^0.6.4",
     "vue": "^2.2.0",
-    "vue-router": "^2.0.0-rc.7",
-    "antv": "latest"
+    "vue-router": "^2.0.0-rc.7"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
