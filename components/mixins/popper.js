@@ -117,7 +117,6 @@ export default {
     },
 
     doDestroy() {
-      /* istanbul ignore if */
       if (this.visible || !this.popperJS) return
       this.popperJS.destroy()
       this.popperJS = null

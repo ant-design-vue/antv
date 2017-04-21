@@ -1,3 +1,5 @@
+// https://github.com/ElemeFE/element/blob/dev/src/utils/clickoutside.js
+
 const nodeList = []
 const ctx = '@@clickoutsideContext'
 
