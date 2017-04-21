@@ -1,6 +1,6 @@
 # Ant Design of Vue
 
-[[![npm package](https://img.shields.io/npm/v/antv.svg?style=flat-square)](https://www.npmjs.org/package/antv)
+[![npm package](https://img.shields.io/npm/v/antv.svg?style=flat-square)](https://www.npmjs.org/package/antv)
 
 An enterprise-class UI design language and Vue-based implementation.
 
